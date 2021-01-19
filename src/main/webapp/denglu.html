@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<form>
+<!--    用户名:<input type="text" name="acc" placeholder="请输入7-9位">-->
+<!--    密码:<input type="text" name="pwd" placeholder="请输入2-4位">-->
+    用户名:<input type="text" name="id" placeholder="请输入7-9位">
+
+
+</form>
+<button onclick="submitBtn()">登录</button>
+</body>
+<script>
+    function submitBtn() {
+        var dataJSON={}
+        dataJSON.id=$("input:first").val();
+        // dataJSON.name=$("input:last").val();
+        // dataJSON.categroy=$("input:last").val();
+        $.ajax({
+            url:'http://localhost:8080/SSMpro_3/goodsSelect',
+            type:'POST',
+            data:JSON.stringify(dataJSON),
+            contentType:'application/json;charset=UTF-8',
+            success:function(result){
+                console.log(result)
+
+            },
+            error:function(){
+
+            }
+
+
+
+        });
+
+    }
+</script>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper配置文件   => mapper 代理接口-->
+<mapper namespace="com.tledu.cn.dao.GoodsMapper">
+
+
+    <select id="queryAll" parameterType="com.tledu.cn.pojo.Goods" resultType="com.tledu.cn.pojo.Goods">
+        select * from goods where id=#{id}
+    </select>
+
+<!--    <insert id="addGoods" parameterType="Goods">-->
+<!--        insert into  goods-->
+<!--        (-->
+<!--            id,-->
+<!--            name,-->
+<!--            category,-->
+<!--            detail,-->
+<!--            stock,-->
+<!--            money,-->
+<!--            create_time,-->
+<!--            image_path-->
+<!--        )-->
+<!--        values-->
+<!--        (-->
+<!--            #{id},-->
+<!--            #{name},-->
+<!--            #{category},-->
+<!--            #{detail},-->
+<!--            #{stock},-->
+<!--            #{money},-->
+<!--            #{createTime},-->
+<!--            #{imagePath}-->
+<!--        )-->
+<!--    </insert>-->
+
+
+</mapper>
